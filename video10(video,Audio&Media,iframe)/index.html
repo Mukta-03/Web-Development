@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video,audio and media,iframe</title>
+</head>
+<body>
+    <video src="cover.mp4" width="300" height="500" controls autoplay loop ></video>
+    <video src="cover2.mp4" width="300" height="500" controls muted poster="poster.jpg"></video>
+
+    <audio src="bravo.mp3" controls autoplay loop ></audio>
+    <!--other audio attributes are muted and preload(none(default value),metadata,auto)-->
+
+    <svg height="100" width="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red"></circle>
+    </svg>
+
+    <img src="img.svg" alt="my svg image">
+
+    <!--embedding another wedbsite in page-->
+    <iframe src="https://scaler.com" width="500" height="315"></iframe>
+    
+    <!--embedding youtube video in page-->
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/RQbnPl5E5No?si=DF6LnNSVKT66sVaX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
