@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css object fit and object cover</title>
+    <style>
+        .con{
+            height: 80vh;
+            width: 80vw;
+            border: 2px solid black;
+            /* background-color: rgb(126, 237, 237); */
+
+            /* you can use background image to restrict people to download image */
+            background-image: url("dwnld.jpg") ;
+            background-position: top left ;
+            /* background-position:center center; */
+            /* background-position: 50% 50%; */
+
+            /* background image repeats by default, in order to stop it from repeating itself use the following */
+            /* background-repeat: no-repeat; */
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y */
+
+            background-clip: border-box;
+            background-clip: padding-box;
+            /* use mdn by hovering above to see the use of thse two */
+           }
+           .container1 img{
+            width: 150px;
+            height: 400px;
+
+            /* by default the image is filled means....object-fit:fill...the image will look distorted; */
+
+            /* to cover the width and height specified for img not for container...before object-fit :cover the img was streching and shrinking....now he img is  covering the width and height by cutting itself*/
+            object-fit: cover;
+           }
+           .container2 img{  
+            width: 150px;
+            height: 400px;
+
+             /* now to show the whole image where space can left if image's width height is smaller , use the object-fit:contain*/
+            object-fit: contain;
+            /* object-fit: scale-down; */
+           }
+        
+           .container3 img{
+            width: 150px;
+            height: 400px;
+
+           /* you can select the area of the image you want to show like bottom left, top left etc(in case of cover when img is cutting), use object-position */
+            object-fit:cover;
+            object-position: left;
+            /* or */
+            /* object-position: 40px 30px; */
+            /* object-position: 40% 40%; */
+           }
+    </style>
+</head>
+<body>
+    <div class="container1 con">
+        <img src="download.jpeg" > image covering the specified height and width by cutting itself 
+        </div>
+         <div class="container2 con">
+        <img src="download.jpeg">whole image is contained within the specified height and width where space may left
+        </div>
+         <div class="container3 con">
+        <img src="download.jpeg" >here the object position is set to left that's why left part of the image is covering the height and width
+    </div>
+    
+</body>
+</html>

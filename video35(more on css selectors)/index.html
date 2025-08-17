@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on css selectors</title>
+    <style>
+        .boxes{
+            border:2px solid blue;
+        }
+        /* if .box is its parent's first child then background color is pink is applied */
+        .box:first-child {
+            background-color: pink;
+        }
+        .box::first-line{
+            color:blue;
+
+        }
+        .boxes *{
+            /* here all the elements of boxes are styles due to .boxes *{}   */
+            Border: 2px solid rgb(177, 46, 177);
+            color:rgb(4, 92, 4);
+        }
+        /* atrribute selector styling
+        
+        [data-color="primary"]{
+            margin-top: 40px;
+            padding-top: 30px;
+
+          } */
+
+          /* grouping of selectors,here p,.box and data-color are grouped  */
+          p, .box,[data-color="primary"]{
+            padding-top:40px;
+          }
+          /* applied to the even children */
+          .box:nth-child(even){
+           background-color: rgb(166, 245, 225); 
+          }
+          /* appplied to the last ist chiled */
+          .box:nth-last-child(1){
+            background-color: rgb(234, 161, 27);
+          }
+          /* to dynamically insert the elements through css, we can  use the pseudo elements that are before or after*/
+          .boxes::before{
+            content:"Hey this is inside the boxes but before the main content of the boxes";
+            background-color: antiquewhite;
+          }
+
+          .boxes::after{
+            content:"Hey this is inside the boxes but after the main content of the boxes";
+            background-color: rgb(222, 166, 166);
+          }
+          /* text-color will be black and bg color will be yellow when user select it and it can be used for elements as well such as boxes::selection{}   */
+          ::selection{
+            background-color: yellow;
+            color: black;
+          }
+
+          .box::first-letter{
+            color:rgba(255, 2, 129, 0.995);
+            font-size:40px;
+          }
+          input::placeholder{
+            color:rgb(250, 6, 47);
+            font-size :20px;
+          }
+
+    </style>
+</head>
+
+<body>
+    <!-- here data-color is attribute and primary is its value -->
+    <div data-color="primary" class="boxes">
+        <div class="box">This is box 1.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis assumenda numquam recusandae! Molestias doloribus pariatur error hic nisi distinctio est similique! Ducimus natus, quae, recusandae cumque quaerat qui similique ea, fugiat officia dicta labore?</div>
+        <div class="box">
+            <p>This is para</p>
+        </div>
+        <div class="box">This is box 3</div>
+        
+    </div>
+    <input type="text" placeholder="    XYGFDDGJ">
+
+
+</body>
+
+</html>

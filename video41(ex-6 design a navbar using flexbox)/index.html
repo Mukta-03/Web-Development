@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-6 design the navbar of the website given in image</title>
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            cursor: pointer;
+        }
+        .left ul, .center ul, .right ul{
+            display:flex;
+            list-style:none;
+            gap:20px;
+        
+        }
+        
+
+        .l1{
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight:bolder;
+        }
+
+       .l2{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">
+            <ul>
+            <img src="icon.png" height="60px" width="60px">
+                <li class="l1">UltraEdit</li>
+            </ul>
+            
+            </div>
+            <div class="center">
+                <ul>
+                    <li>Product<span><img src="https://img.icons8.com/?size=60&id=99991&format=png" height="12px" width="11px"></span></li>
+                    <li>Pricing<span><img src="https://img.icons8.com/?size=60&id=99991&format=png" height="12px" width="11px"></span></li>
+                    <li>Resources<span><img src="https://img.icons8.com/?size=60&id=99991&format=png" height="12px" width="11px"></span></li>
+                    <li>About us<span><img src="https://img.icons8.com/?size=60&id=99991&format=png" height="12px" width="11px"></span></li>
+                </ul>
+
+            </div>
+            <div class="right">
+                <ul>
+                    <li class="l2">Buy Now</li>
+                    <li><img src="download.webp" width="25px" height="25px"></li>
+                    <li>English</li>
+                    <li><img src="lens1.jpg" width="25px" height="25px"></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+</body>
+</html>

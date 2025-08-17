@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css transforms</title>
+    <!-- css transforms are mainly used for navbars -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .rotate {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(90deg);
+            /* another unit */
+            /* transform:rotate(0.25turn); */
+
+        }
+
+        .rotateY {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: rgb(240, 199, 237);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            transform: rotateY(70deg);
+        }
+
+        .scale {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: rgb(212, 252, 167);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            /* following code expands the box size twice of actual size */
+            transform: scale(2);
+            /* more */
+            /* transform: scaleX(3); */
+            /* transform:scaleY(2); */
+            /* transform: scale(3,2); */
+            /* transform: scale3d(3,2,10); */
+        }
+        .skew {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: rgb(185, 187, 245);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            transform: skew(45deg);
+            /* transform: skewX(34deg); */
+            /* transform: skewY(34deg); */
+        }
+
+         .translate {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: rgb(185, 187, 245);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            transform: translate(500px,50px);
+            /* transform: translateX(500px); */
+            /* transform: translateY(100px); */
+            /* transform: translateZ(20px); */
+            /* transform: translate3d(500px,100px,20px); 
+            */
+            /* will be translated 50% of its width */
+            /* transform: translate(50%); */
+            }
+
+            .altgthr{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: rgb(21, 230, 177);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            transform: translateX(500px) skewY(50deg) scaleY(3) scaleX(5) translateY(100px) ;
+            }
+
+            .origin{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: rgb(16, 23, 232);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 120px;
+            /* by default origin of the box is its center, means it will tranform about its origin */
+            transform: rotate(120deg);
+            /* transform origin is used to fix the origin at a particular point, now the box will rotate about 0,0, similarly you can fix box origin at any point like 50% 50% , etc... */
+            transform-origin: 0% 0%;
+            }
+
+
+        .container {
+            height: 80vh;
+            width: 100vw;
+            border: 2px solid rgb(35, 1, 29);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="rotate">Hey</div>
+        <div class="rotateY">Hlo</div>
+        <div class="scale">Hloo</div>
+        <div class="skew">Hlooo</div>
+        <div class="translate">Hloooo</div>
+        <div class="altgthr">Heyo</div>
+        <div class="origin">Wow</div>
+
+
+    </div>
+</body>
+
+</html>sdgdk

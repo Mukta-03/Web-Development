@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid1</title>
+    <style>
+        .container{
+            border: 2px solid rgb(61, 7, 61);
+            display:grid;
+            /* you can even give names to them */
+            grid-template-columns: [ist] 120px [sec] 100px;
+            grid-template-rows:50px 100px 150px ;
+        }
+        .item{
+            height:20px;
+            width:20px;
+            border:2px solid rgb(12, 158, 158);
+        }
+        .item-4{
+            /* item4 grid-row start from row 1 and go to col 2 */
+            grid-row: 1/2; 
+            /* item4 grid-col start from row 1 and go to col 2 */
+            grid-column: 1/3;
+
+            /* the above code places the item 4 at place of item 1 and takes the space of item 2 as well due to 1/3 and pushes the item 1 away and other items respectively */
+        }
+        /* now to overlap item 1 and 4 */
+         .item-1{
+            grid-row:1/2;
+            /* or 
+            grid-row-start:1; 
+            grid-row-end:2;  */
+            grid-column:ist/sec;
+
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+    
+</body>
+</html>

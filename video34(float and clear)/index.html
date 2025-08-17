@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css float and clear</title>
+    <!-- float and clear are not used in modern websites -->
+    <style>
+        img {
+            /* float:left; */
+            float: right;
+
+        }
+
+        .cards {
+            border: 2px solid red;
+            /* to place img inside cards container */
+            display: flow-root;
+
+        }
+
+        .card {
+            border: 2px solid blue;
+        }
+
+        .card:nth-child(3) {
+            /* card 2 is 3rd child bcoz img is 1st and card1 is 2nd */
+            /* to block the image from floating in right of card2 */
+            clear: right;
+            /* clear:left */
+            /* clear: both */
+        }
+    </style>
+</head>
+<!-- .cards>card*3 -->
+<div class="cards">
+    <img src="OIP.jpeg" width="300" height="300">
+    <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius harum beatae et molestias
+        blanditiis facilis delectus rerum officiis laborum expedita eaque vel deleniti voluptatibus, placeat inventore
+        nobis voluptatum quia nesciunt accusamus aspernatur.</div>
+    <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae rem tenetur, doloremque
+        molestiae aspernatur nulla alias! Delectus, in vitae libero tempore sed reprehenderit, error illo quam maiores
+        molestias obcaecati natus. Officiis, esse labore. In et itaque ex possimus sapiente autem ipsum libero, harum
+        quo assumenda tenetur dicta soluta cupiditate quidem magni minus obcaecati quis labore provident modi? Quam sint
+        dicta dolorum iusto culpa nam id impedit, suscipit magni aut? Consequuntur, ratione incidunt aperiam assumenda
+        corporis corrupti amet consectetur beatae ipsa, soluta consequatur numquam hic, ex minima eius iusto laborum
+        nihil officiis quibusdam veniam expedita ipsum dolor optio debitis. Reiciendis facere quos minima unde
+        cupiditate dolore accusamus illum expedita neque, magni facilis itaque praesentium, assumenda similique vero ut?
+        Sint error nemo dolor vitae animi doloremque sequi, vel optio quibusdam? Cupiditate quibusdam magnam adipisci
+        non sed explicabo reiciendis consectetur! Laboriosam eum minima repellendus libero facilis laudantium tenetur
+        dolorum nisi harum, eius omnis! Unde eius et blanditiis omnis aperiam. Ad voluptatum id laborum nesciunt beatae
+        dolores facere, dolorum saepe rem possimus tempora, explicabo itaque sequi placeat ipsa inventore temporibus!
+        Perferendis facilis eligendi doloribus dolorem ipsam cumque corporis suscipit natus provident officia incidunt
+        repellendus, nisi veniam obcaecati amet hic praesentium at. Deserunt earum ea optio asperiores alias. Placeat
+        architecto quod ea doloribus. Laudantium maxime ipsam sunt et incidunt fugiat quisquam porro explicabo rem.
+        Nulla autem ex nobis sed ullam vero quis provident distinctio expedita nesciunt omnis atque consequuntur
+        explicabo, quia doloremque dolorum perspiciatis eum eos rem eaque amet adipisci officiis! In consequatur
+        voluptatum odio ut exercitationem accusantium, ex modi itaque similique ab, molestiae pariatur explicabo
+        repudiandae porro optio commodi ullam asperiores dolorem soluta est dolor aliquid vel? Ipsum, debitis! Maxime ad
+        qui, quisquam iure, accusantium maiores impedit, aspernatur sint fuga ullam dolore dolorem odio. Vero totam
+        laudantium sequi quia dignissimos necessitatibus pariatur autem temporibus!</div>
+    <div class="card">card 3</div>
+</div>
+
+</body>
+
+</html>

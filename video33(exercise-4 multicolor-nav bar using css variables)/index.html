@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-4 Multicolor website using global variables</title>
+    
+    <style>
+        :root{
+            --color: rgb(13, 74, 94);
+            --seccolor: rgb(177, 205, 228);
+            --textcolor:white;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: var(--seccolor);
+        }
+        nav{
+                  background-color: var(--color);
+                  padding: 4px;
+        }
+        
+        ul li{
+            list-style:none;
+            /* we must use display:flex in ul{} instead of inline in ul li {}*/
+            display: inline; 
+            margin: 5px;
+            padding: 5px;
+            color:var(--textcolor);
+        }
+        ul li a{
+             color:var(--textcolor);
+             text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About us</a></li>
+                <li><a href="/">Contact us</a></li>
+                <li><a href="/">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+</body>
+</html>

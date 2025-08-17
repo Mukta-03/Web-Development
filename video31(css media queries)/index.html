@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css media queries</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        @media only screen and (orientation: landscape){
+        body{                    
+            border: 2px solid blue ;
+        }                       
+    }
+        @media only screen and (max-width:500px) {
+            body {
+                background-color: rgb(222, 73, 180);
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+
+        /* @media not/only mediatype(screen,all,speech,print,) and (expressions){
+    css-code;
+    } 
+    (the above actual syntax means if only width is 500 px the bg color will  be purple above 500 px , the color will be pink, width could be min as well and the boxes are aligned as column when color is purple and in pink they are aligned as row  )
+    */
+
+    .boxes{
+        display: flex;
+    }
+    .box{
+        width:300px;
+        height:300px;
+        background-color: slategray;
+        padding:6px;
+        margin:6px;
+    }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div>
+        This body is pink in color when width is above 500 px and below 500px it is in purple color
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </body>
+
+</html>

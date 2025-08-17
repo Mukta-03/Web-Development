@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css overflow property</title>
+    <style>
+        .box{
+            width: 10vw;
+            height: 15vh;
+            border: 2px solid black;
+            overflow:auto; 
+            /* for automatically adding scrollbar when content overflows  */
+           
+        }
+        .box1{
+            width:40vw;
+            height: 50vh;
+            border: 2px solid black;
+            overflow: scroll; 
+            /* for adding scrollbar even the content is not overflowing */
+        }
+         .box2{
+            width:50vw;
+            height: 20vh;
+            border: 2px solid black;
+            overflow: scroll; 
+            /* for adding scrollbar even the content is not overflowing */
+            white-space: nowrap;
+            /* to restrict the lines flow down */
+             text-overflow: ellipsis;
+            /* to dot lines */
+
+           
+        }
+       .box3{
+             width: 30vw;
+             height: 5vh;
+             border: 2px solid black;
+             overflow: hidden;
+            /* to hide the overflowing content*/
+            overflow: clip;
+        }
+        .box4{
+             width: 40vw;
+             height: 10vh;
+             border: 2px solid black;
+             overflow-x: hidden;
+             overflow-y: scroll; 
+             /* or
+             overflow : hidden scroll */
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box">This is a box and Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quos qui, commodi dignissimos reiciendis nemo, explicabo nulla unde minima quisquam accusantium numquam tempora repellat laudantium tenetur. Mollitia commodi soluta quisquam molestiae ipsa?ygyuuyuyuyryxe5erewyrxcc8vybuytuyrv6uce5u6xe65c7uvfyuto9</div>
+     <div class="box1">This is a box 1 and Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quos qui, commodi dignissimos reiciendis nemo, explicabo nulla unde minima quisquam accusantium numquam tempora repellat laudantium tenetur. Mollitia commodi soluta quisquam molestiae ipsa?ygyuuyuyuyryxe5erewyrxcc8vybuytuyrv6uce5u6xe65c7uvfyuto9</div>
+     <div class="box2">This is a box 1 and Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quos qui, commodi dignissimos reiciendis nemo, explicabo nulla unde minima quisquam accusantium numquam tempora repellat laudantium tenetur. Mollitia commodi soluta quisquam molestiae ipsa?ygyuuyuyuyryxe5erewyrxcc8vybuytuyrv6uce5u6xe65c7uvfyuto9</div>
+     <div class="box3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ab earum! Repellat, aut! Repudiandae molestiae, alias maxime doloremque magnam veniam nesciunt quae? Labore eaque, placeat quia asperiores sit perspiciatis magni?</div>
+     <div class="box4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ab earum! Repellat, aut! Repudiandae molestiae, alias maxime doloremque magnam veniam nesciunt quae? Labore eaque, placeat quia mdnwahd wixoiawjoudq iiwudxoauwocjawscoi iowaudxoqYWDYUqycoi shdochsodhcosyoc hddocuoaclhc houdcowcwbcohcohcoawc bnohcia c hcownc   cohc kzhxws haiwshxoaw sihcoawcohsodhcowsocgh sidchowsyeocywoshowhcdohococ ochhcowoie hochohcowyvyocv </div>
+    
+</body>
+</html>

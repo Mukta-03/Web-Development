@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css sizing units</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*html{ 
+            font-size: 12px;
+        }
+          inside the body suppose container's font-size is not given means default size is 16px,the html's font size will be inherited by container in which para is contained and then para's size will be as 12*2(12px (of html)) and 2em)
+        */
+
+        .box{
+            box-sizing:border-box;
+            border: 2px solid blue;
+            /* width: 300px; */
+            /* width: 100vw; */
+            width: 80vw;
+            height: 10vh;
+            margin: auto; /* this margin auto will work only in case of block level element not inline*/
+            background-color: rgb(185, 241, 223);
+        
+        }
+        .container{
+             box-sizing:border-box;
+            border: 2px solid blue;
+            /*when avoiding pixels width: 300px; */
+            /* width: 100vw; */
+            width: 80vw;
+            height: 80vh;
+            margin: 25px auto; /* this 25px is top margin and auto is for left right margin*/
+            font-size: 16px; /*defult size of a para */
+            background-color: rgb(185, 241, 223);
+        }
+        .container p{
+            /*   font-size: 1em;   para is not affected with 1 em because 1*16px=16px*/
+            font-size: 2em; /* here paragraph size is 2*16px=32,16px is the inherited size */
+            /*font-size:2rem; here the font size is multiplied by the font-size of html that is a root element*/
+        }
+        .container2{
+            background-color: rgb(143, 231, 28);
+            color:black;
+            font-size: 22px;
+            width: 100vmin; /*100vmin  means 100 vh for this laptop,which means you can also use 100 vh ,in phone vmin=vw as width is lesser than height in phone*/
+        }
+        .con3{
+
+            width:80vw;
+            min-height: 40vh;
+            margin: 25px auto;
+            border: 2px solid black;
+        }
+        .con3 div{
+            border: 2px solid blue;
+            width:50%;
+            /* the width of div  will be half of container's width */
+        }
+        .con3 >div >p{
+            border: 2px solid green;
+            width: 50%;
+            /* the width of p will be half of div's width */
+
+        }
+    </style>
+</head>
+<body>
+    
+    <span class="box">This is span(inline)box ,margin auto not applied</span>
+
+    <div class="box">This is a div having box class(block) box,margin auto applied</div>
+
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum quasi dolor impedit ullam sit illo ab praesentium perspiciatis rem</p>
+    </div>
+    <div class="container2">This is another container "container 2" </div>
+    <div class="con3">
+        <div>
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui perferendis inventore, natus similique repellat, voluptate unde accusamus minima assumenda cum cupiditate corporis voluptates adipisci obcaecati libero in molestiae iste ad mollitia sunt iusto.
+            <p>A div inside para which is containbed in another.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione laboriosam ipsa possimus temporibus nostrum architecto itaque pariatur inventore illum beatae hic optio odio omnis illo, quidem commodi debitis fugiat. Ullam magnam dolore reiciendis animi.</p>
+        </div>
+        <!-- height will be increased automatically if you add content more than height,due to min-height property -->
+        
+        </div>
+        </body>
+        </html>

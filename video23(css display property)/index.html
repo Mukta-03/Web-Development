@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS display property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid black;
+            display:inline-block;
+            width: 300px;
+            padding: 40px; /*top padding can't be applied to inline elements*/
+            margin:40px; /*similarly top margin can't be applied to inline elements ,for this we r using display:inline-block */
+            display:flex;
+            justify-content: center;
+            /* display flex is used to center the content */
+            
+        }
+        .box1{
+            /* display: none;    (to remove the space and box)  */
+            visibility: hidden;   /*to remove the box only not space*/
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="box">div is a block element but now made an inline element by using display property</div>
+    
+    <span>span is an inline</span>
+    <span>element</span>
+
+    <div class="box box1" >Another div is now also made an inline element</div>
+    
+</body>
+</html>

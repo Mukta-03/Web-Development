@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css animation</title>
+    <style>
+        .container{
+            height: 80vh;
+            width: 50vw;
+            border: 2px solid blue;
+            
+        }
+        .box{
+            height: 30vh;
+            width: 30vw;
+            background-color: greenyellow;
+            /* animation-name: anii;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            animation-delay: 1s;
+            animation-direction: alternate-reverse;
+            /* animation-play-state: paused; */
+            /* animation-iteration-count: 4;  */
+            /* animation-iteration-count: infinite; */
+
+            /* all together -shorthand___
+            animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+            /* use multiple animation */
+            animation: anii 1s ease-out 1s 1 backwards, anii-2 1s ease-out  1s ;              
+    }
+    @keyframes anii{
+        from{
+            background-color: blueviolet;
+
+        }
+        to{
+            background-color: rgb(31, 202, 249);
+            transform: translate(300px);
+        }
+    }
+
+    /* multiple animation */
+    @keyframes anii-2{
+        0%{
+            transform: translate (500px) rotate(100deg);
+        }
+        30%{ 
+            transform: translate(1000px) rotate(200deg);
+        }
+        60%{
+            transform: rotate(360deg);
+        }
+        100%{
+            transform: scale(2);
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling lists with css</title>
+    <style>
+        ol{
+            /* display:flex is used to align elements horizontally in line and is used within ul or ol only */
+            display:flex;
+            
+        }
+        ol li{
+            padding : 30px;
+            
+        }
+        nav ul li{
+            list-style:devanagari;
+            /* similarly */
+            list-style: square inside;
+            /* here both are not working neither devanagari nor square due to image */
+            background-color: pink;
+            
+    
+            /* li has marker and item ,background color is not applied to markers   .....to do so,follow the following*/
+            list-style-position: inside; 
+            border: 2px solid aqua;
+            list-style-image: url("download.jpg");
+            /* the image replaced the devanagari marker */
+
+             /* list-style-type:"😀";    ...you can add emoji as well*/
+
+        }
+        ul li{
+            /* we can use these threee all along but either circle(type) is selected or image,here image is given at last thus image is chosen */
+            list-style: circle inside url("download.jpg");
+            
+           
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Hiiii</li>
+            <li>Hey</li>
+            <li>Hello</li>
+            <li>Heyo</li>
+        </ul>
+        
+    </nav>
+    <ul>
+            <li>Another list</li>
+            <li>Another list</li>
+            <li>Another list</li>
+            <li>Another list</li>
+        </ul>
+         <ol>
+            <li>Another list 2</li>
+            <li>Another list 2</li>
+            <li>Another list 2</li>
+            <li>Another list 2</li>
+        </ol>
+</body>
+</html>

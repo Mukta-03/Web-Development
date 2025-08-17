@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+    <style>
+        /*global variable*/
+        :root{
+            --color: rgb(199, 235, 199);
+            --seccolor: rgb(231, 95, 197);
+            /* defpad variable for default padding */
+            --defpad:10px;
+            /* defop variable for default opacity */
+            --defop:0.6;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            /* general way */
+            /* background-color: rgb(113, 230, 226); */
+
+            /* using css variables with var fuction*/
+            background-color:var(--color)
+
+        }
+
+        .container{
+            /* general way */
+            /* background-color:rgb(196, 237, 237); */
+              
+            /* using css variables with var function */
+            background-color: var(--seccolor);
+        }
+
+        ul{
+            display:flex;
+        }
+
+    ul li{
+        list-style:none;
+        margin:10px;  
+        /* general way */
+        /* padding:5px; */
+
+        /* padding using variable defpad */
+        padding: var(--defpad);
+        /* border  using variable */
+        border: 5px solid var(--seccolor)
+    }
+
+    /* local variable */
+    ul li:first-child{
+        /* general way */
+        /* opacity:0.4; */
+        /* using defop variable */
+        opacity:var(--defop);
+        --color:rgb(251, 251, 12);
+        background-color: var(--color);
+        /* when variable is not found-means variable is not declared,here aqua color will be chosen if local and global variable color is not found */
+        /* background-color:var(--color, aqua); */
+    }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li>Red</li>
+        <li>Blue</li>
+        <li>Green</li>
+    </ul>
+</div>
+<div class="container">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio est impedit, recusandae alias vitae ipsam ex sequi hic ea veniam saepe, blanditiis itaque voluptates. Veniam sed enim quod tempore alias minima voluptatum eaque consequatur.
+</div>
+    
+</body>
+</html>

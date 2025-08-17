@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS specificity and cascade</title>
+    <style>
+
+         /* specificity of this selector is 10000 */
+        h2 {
+            color: rgb(144, 42, 165) !important;
+        }
+
+         /* specificity of this selector is 100 */
+        #hello{
+        color:darkgoldenrod;
+        }
+
+        /* specificity of this selector is 11 due to h1=1 + class red=10*/
+        h1.red {
+            color: red;
+        }
+        
+         /* specificity of this selector is 10 */
+        .blue {
+            color: blue;
+        }
+
+         /* specificity of this selector is 10 */
+        .green {
+            color: green;
+        }
+ 
+         /* specificity of this selector is 1 */
+        h1 {
+            color: aqua;
+        }
+         
+    </style>
+</head>
+
+<body>
+    <!-- order of specifity and calculation of specificity-
+     inline style(1000)>Id selector(100)>class, attribute selector and pseudo-classes(10)>element selectors and pseudo-elements(1)>universal selector(0)   and important has 10,000 points it can override inline style as well-->
+
+     <!-- here selector h2 is chosen as it has !important in declaration,the inline style here is overriden by important -->
+    <h2 class="red yellow green" style="color:pink";> Important(10000)
+
+    <!-- here style is applied by choosing inline style,nor class neither element selector -->
+    <h1 class="red yellow green" style="color:pink" ;>Inline style(1000) </h1>
+    
+    <!-- here id selector is chosen -->
+    <h1 id="hello" class="red yellow green">Id selector(100)</h1>
+
+    <!-- here  class red is chosen as it has specificity 11 greater than specificities of blue and green,otherwise the green will be chosen as it is placed at last in style tag-->
+    <h1 class="red yellow green">Class selector(10)</h1>
+
+    <!-- h1 selector is chosen -->
+    <h1> Element selector(1)</h1>
+
+    <p>quiz-calculate the specificity of following-</p>
+    <p>
+     a.harryclass.rohanclass[href]:hover{
+     color: red;
+     } 
+    </p>
+    <p>Answer is 41</p>
+
+    <p>because a(anchor) is an elemant=1 , harryclass and rohan class =10+10=20,href is an attribute=10,hover is a pseudo class=10</p>
+    
+
+
+
+</body>
+
+</html>
