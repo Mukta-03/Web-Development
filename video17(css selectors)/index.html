@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selector</title>
+    <style>
+        /*element selector*/
+        p{
+            background-color: aqua;
+        }
+         /* class selector */
+        .red{
+            background-color: rgb(250, 144, 144);
+        }
+        /* Id selector */
+        #div2{
+            background-color: #cba8ec;
+        }
+        /* child selector */
+        div1 > p{
+            color: Aqua;
+            background-color: Black;
+        }
+        /* descendamt selector */
+        div2 p{
+            background-color: pink;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* pseudo selector anchor tag*/
+        a:visited{
+            color: red;
+        }
+
+        a:link{
+            color: greenyellow;
+        }
+        a:active{
+            background-color: rgb(192, 192, 231);
+        }
+        a:hover{ 
+            color: blue; 
+            background-color: aquamarine;
+        } 
+
+        /* first child seudo selector */
+        h2:first-child{
+         background-color: blueviolet;   
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>First child heading</h2>
+    <h2>Second child heading</h2>
+</header>
+
+    <p>This is a para</p>
+
+    <div1 class="red">
+        This is written inside a div having class red
+    <p>This is a para inside div</p>
+    </div1>
+    <div2 id="div2">
+        This is written inside another div
+        <article>
+            <p>para inside article within div </p>
+        </article>
+    </div2>
+    <a target="_blank" href="https://www.google.com">visit Google in a new tab</a>
+    <a target="_blank" href="https://www.Youtube.com">visit Youtube in a new tab</a>
+   
+
+</body>
+</html>
