@@ -1,0 +1,1 @@
+// var is used for global variables and let is a block level
