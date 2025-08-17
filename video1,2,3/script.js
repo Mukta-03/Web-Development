@@ -1,0 +1,1 @@
+alert("focus daily on every video of your course")
